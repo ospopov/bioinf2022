@@ -3,23 +3,39 @@
 import string
 
 
-def capitals(input_l, letters_in=string.ascii_uppercase, letters_out=string.ascii_lowercase):
+def capitals(input_l):
     new_l = str()
     for i in input_l:
-        if i in letters_in:
+        if i in string.ascii_uppercase:
             new_l += i
         else:
-            for j in range(len(letters_out) - 1):
-                if i == letters_out[j]:
-                    new_l += letters_in[j]
+            for j in range(len(string.ascii_lowercase) - 1):
+                if i == string.ascii_lowercase[j]:
+                    new_l += string.ascii_uppercase[j]
     return new_l
 
 
 capitals(input('Enter a string '))
 
+
 # Добавить к предыдущему заданию функцию с преобразованием всех символов в прописные и функцию с отражением (все заглавные становятся прописными и наоборот), минимально дублируя код. Использовать функции стандартной библиотеки lower() и find() нельзя.
 
-capitals(input_l=input('Enter a string '), letters_in=string.ascii_lowercase, letters_out=string.ascii_uppercase)
+def more_capital(input_l, inversion=False):
+    new_l = str()
+    for i in input_l:
+        if not inversion:
+            if i in string.ascii_lowercase:
+                new_l += string.ascii_uppercase[string.ascii_lowercase.index(i)]
+            else:
+                new_l += string.ascii_uppercase[string.ascii_uppercase.index(i)]
+        elif i in string.ascii_lowercase:
+            new_l += string.ascii_uppercase[string.ascii_lowercase.index(i)]
+        elif i in string.ascii_uppercase:
+            new_l += string.ascii_lowercase[string.ascii_uppercase.index(i)]
+    return new_l
+
+inver_in = input('Инвертировать данные (True/False) ')
+more_capital(input_l=input('Enter a string '), inversion=inver_in)
 
 # Написать программу на Python3, которая сначала запрашивает положительное число-основание системы счисления, затем два числа в системе счисления с этим основанием, и потом четвертое число-основание системы счисления, в которой надо вывести результат. В ходе выполнения программа возвращает результат сложения двух чисел в требуемой системе счисления. Нельзя использовать для перевода функцию int().
 
