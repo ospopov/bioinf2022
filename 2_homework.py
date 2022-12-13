@@ -29,12 +29,11 @@ for i in range(0, max([len(inp_num_even), len(inp_num_odd)])):
 
 # Пара чисел задают отрезок на прямой. Пользователь вводит числа, которые разбиваются на пары. Прекращение ввода пустой строкой. Если два введенных отрезка пересекаются, то они объединяются в один. Программа выводит итоговый набор отрезков.
 
-inp_num = []
-
 
 def for_sort(x):
     return x[0]
 
+inp_num = []
 
 while True:
     temp_1 = input('Enter a number 1 ')
@@ -43,9 +42,7 @@ while True:
         break
     else:
         inp_num.append([min(int(temp_1), int(temp_2)), max(int(temp_1), int(temp_2))])
-
-inp_num = [[3, 4], [5, 7], [8, 9], [5, 6], [3, 4], [1, 2], [5, 9], [3, 4], [2, 3], [4, 5], [6, 7]]
-
+        
 inp_num.sort(key=for_sort)
 
 
