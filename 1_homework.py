@@ -1,6 +1,6 @@
 # простые делители
 
-int_num = int(input("enter the number "))
+int_num = int(input("enter a number "))
 for i in range(int_num - 1, 1, -1):
     prime = 0
     if int_num % i == 0:
@@ -44,8 +44,8 @@ square_plot(square_length)
 
 # rectangle
 
-rectangle_1 = int(input("enter the number (1)"))
-rectangle_2 = int(input("enter the number (2)"))
+rectangle_1 = int(input("enter a number (1)"))
+rectangle_2 = int(input("enter a number (2)"))
 
 
 def rectangle_plot(rectangle_1, rectangle_2):
