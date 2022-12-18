@@ -34,7 +34,7 @@ def more_capital(input_l, inversion=False):
             new_l += string.ascii_lowercase[string.ascii_uppercase.index(i)]
     return new_l
 
-inver_in = input('Инвертировать данные (True/False) ')
+inver_in = bool(input('Инвертировать данные (True/False) '))
 more_capital(input_l=input('Enter a string '), inversion=inver_in)
 
 # Написать программу на Python3, которая сначала запрашивает положительное число-основание системы счисления, затем два числа в системе счисления с этим основанием, и потом четвертое число-основание системы счисления, в которой надо вывести результат. В ходе выполнения программа возвращает результат сложения двух чисел в требуемой системе счисления. Нельзя использовать для перевода функцию int().
