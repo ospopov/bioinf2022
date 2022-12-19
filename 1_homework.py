@@ -28,7 +28,11 @@ def fibonacci(n1, n2, length_Fibonacci=15):
 
 
 n = max_prime(int(input("enter the number ")))
-fibonacci(n1=n, n2=n, length_Fibonacci=15)
+if n == 1:
+    m = 1
+else:
+    m = max_prime(n-1)
+fibonacci(n1=m, n2=n, length_Fibonacci=15)
 
 # Square
 
