@@ -126,7 +126,7 @@ while game == 0:
         print('Доступные пешки ', check_can_move)
         checker = input("Введите пешку")
         while checker not in check_can_move:
-            checker = input("Введите верную пешку")
+            checker = input("Введите верную шашку")
         checker_can_move = game_board.cell[checker].can_move()
         print('Доступные ходы ', checker_can_move)
         checker_move = input("Введите ход")
